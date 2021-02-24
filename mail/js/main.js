@@ -6,11 +6,18 @@ console.log(emailAutorizzate);
 var emailInserita =prompt("Inserisci la tua email");
 
 //se l'email è all'interno della lista faccio un alert
+var mailtrovata = false;
 
 for (var i = 0; i < emailInserita.length; i++) {
     if (emailAutorizzate[i] == emailInserita) {
-        alert("Email autorizzata");  
+        mailtrovata = true;  //assegna il valore true
     }
 };
 
+// mostro messaggio all'utente
+if (mailtrovata == true) {
+    alert("Email autorizzata");
+} else {
+    alert("Email non autorizzata");
+};
 
